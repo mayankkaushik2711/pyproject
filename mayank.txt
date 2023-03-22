@@ -1,0 +1,98 @@
+import time
+import names
+import random
+n=int(input("Enter the no of category of essential u want [1)grocery 2)stationary 3)medical store]"))       #n
+if n==1:
+    print("searching for the nearest grocery shop near u",end="")
+    time.sleep(0.5)
+    print("..",end="")
+    time.sleep(0.5)
+    print("..",end="")  
+    time.sleep(0.5)
+    print("..")
+    print( )
+    shops=[]
+    x=random.randint(1,3)                                                                                    #x
+    for i in range(x):
+        c=names.get_full_name()                                                                               #c
+        y=random.randint(25,30)                                                                                
+        print(i+1,c,"grocery shop can deliver u within" ,y, "mins.")
+        shops.append(c)
+        print()
+    n=int(input("from where you want to buy"))
+    print("***********welcome to",shops[n-1],"grocery store***********")
+    print()
+    print("                                          LIST OF ITEMS                                                ")   
+    d = {1: ["Shop",   20,],
+    2: ["Shampoo", 100, ],
+    3: ["Conditioner", 150,],
+    4: ["Razors", 20, ],
+    5: ["Shaving cream", 100, ],
+    6: ["Salt", 99, ],
+    7: ["Refined oil", 60, ],
+    8: ["Tata tea", 10, ],    
+    9: ["Brush", 40, ],
+    10: ["Toothpaste", 50, ]    } 
+    print("sno      item         price")
+    item_no=[]
+    price=()
+    for k,i in d.items():
+        item,price=i
+        item_no.append(k)
+        print(k,"      ",item,"        ",price,"RS")
+    c=int(input("Enter sno of product u want"))
+    d=int(input("Enter number of products you want "))
+    total=[]
+    while d>0:
+        if c==1:
+            A=d*20
+            total.append(A)
+            print("This product total costs" ,A,"rs")
+        elif c==2:
+            B=d*100
+            total.append(B)
+            print("This product total costs" ,B,"rs")
+        elif c==3:
+            C=d*150
+            total.append(C)
+            print("This product total costs" ,C,"rs")
+        elif c==4:
+            D=d*20
+            total.append(D)
+            print("This product total costs" ,D,"rs")
+        elif c==5:
+            E=d*100
+            total.append(E)
+            print("This product total costs" ,E,"rs")
+        elif c==6:
+            F=d*99
+            total.append(F)
+            print("This product total costs" ,F,"rs")
+        elif c==7:
+            G=d*60
+            total.append(G)
+            print("This product total costs" ,G,"rs")
+        elif c==8:
+            H=d*10
+            total.append(H)
+            print("This product total costs" ,H,"rs")
+        elif c==9:
+            I=d*40
+            total.append(I)
+            print("This product total costs" ,I,"rs")
+        elif c==10:
+            J=d*50
+            total.append(J)
+            print("This product total costs" ,J,"rs")    
+        print()
+        f=int(input("if u are done press 1 or to add more products press 2 :"))
+        if f==1:
+            break
+        elif f==2:
+            c=int(input("Enter sno of product u want"))    
+            d=int(input("Enter number of products you want "))
+        
+    a=sum(total)
+    print()
+    print("TOTAL PAYABLE AMOUNT IS",a,"rs")
+    
